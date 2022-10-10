@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author braul
@@ -31,11 +34,11 @@ public class VistaVotacion extends javax.swing.JFrame {
         botonP3 = new javax.swing.JButton();
         botonP2 = new javax.swing.JButton();
         labelTotalNaranja = new javax.swing.JLabel();
-        textoTotalP1 = new javax.swing.JTextField();
         labelTotalNaranja1 = new javax.swing.JLabel();
-        textoTotalP2 = new javax.swing.JTextField();
         labelTotalNaranja2 = new javax.swing.JLabel();
-        textoTotalP3 = new javax.swing.JTextField();
+        textoTotalP1 = new javax.swing.JLabel();
+        textoTotalP2 = new javax.swing.JLabel();
+        textoTotalP3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,29 +70,17 @@ public class VistaVotacion extends javax.swing.JFrame {
         labelTotalNaranja.setForeground(new java.awt.Color(0, 0, 0));
         labelTotalNaranja.setText("Total:");
 
-        textoTotalP1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoTotalP1ActionPerformed(evt);
-            }
-        });
-
         labelTotalNaranja1.setForeground(new java.awt.Color(0, 0, 0));
         labelTotalNaranja1.setText("Total:");
-
-        textoTotalP2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoTotalP2ActionPerformed(evt);
-            }
-        });
 
         labelTotalNaranja2.setForeground(new java.awt.Color(0, 0, 0));
         labelTotalNaranja2.setText("Total:");
 
-        textoTotalP3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoTotalP3ActionPerformed(evt);
-            }
-        });
+        textoTotalP1.setText("jLabel1");
+
+        textoTotalP2.setText("jLabel1");
+
+        textoTotalP3.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,9 +89,6 @@ public class VistaVotacion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(labelTitulo))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(botonP3)
@@ -108,18 +96,21 @@ public class VistaVotacion extends javax.swing.JFrame {
                             .addComponent(botonP2))
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(labelTotalNaranja)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textoTotalP1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(textoTotalP1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(labelTotalNaranja1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textoTotalP2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(textoTotalP2))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(labelTotalNaranja2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textoTotalP3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(textoTotalP3))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(labelTitulo)))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -131,19 +122,19 @@ public class VistaVotacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonP1)
                     .addComponent(labelTotalNaranja)
-                    .addComponent(textoTotalP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoTotalP1))
                 .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonP2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelTotalNaranja1)
-                        .addComponent(textoTotalP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textoTotalP2))
+                    .addComponent(botonP2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonP3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelTotalNaranja2)
-                        .addComponent(textoTotalP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textoTotalP3))
+                    .addComponent(botonP3))
                 .addGap(72, 72, 72))
         );
 
@@ -161,18 +152,6 @@ public class VistaVotacion extends javax.swing.JFrame {
     private void botonP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonP2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonP2ActionPerformed
-
-    private void textoTotalP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoTotalP1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoTotalP1ActionPerformed
-
-    private void textoTotalP2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoTotalP2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoTotalP2ActionPerformed
-
-    private void textoTotalP3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoTotalP3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoTotalP3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,10 +196,60 @@ public class VistaVotacion extends javax.swing.JFrame {
     private javax.swing.JLabel labelTotalNaranja;
     private javax.swing.JLabel labelTotalNaranja1;
     private javax.swing.JLabel labelTotalNaranja2;
-    private javax.swing.JTextField textoTotalNaranja;
-    private javax.swing.JTextField textoTotalNaranja1;
-    public javax.swing.JTextField textoTotalP1;
-    public javax.swing.JTextField textoTotalP2;
-    public javax.swing.JTextField textoTotalP3;
+    private javax.swing.JLabel textoTotalP1;
+    private javax.swing.JLabel textoTotalP2;
+    private javax.swing.JLabel textoTotalP3;
     // End of variables declaration//GEN-END:variables
+    //getter y setter de los botones 
+    public JButton getButton1(){
+        return  botonP1;         
+    }
+    
+    public void setButton1(JButton botonP1){
+        this.botonP1 = botonP1;         
+    }
+    
+    public JButton getButton2(){
+        return  botonP2;         
+    }
+    
+    public void setButton2(JButton botonP2){
+        this.botonP2 = botonP2;         
+    }
+    
+    public JButton getButton3(){
+        return  botonP3;         
+    }
+    
+    public void setButton3(JButton botonP3){
+        this.botonP3 = botonP3;         
+    }
+    
+    public JLabel getTextoTotalP1(){
+        return  textoTotalP1;         
+    }
+    
+    public void setTextoTotalP1(JLabel textoTotalP1){
+        this.textoTotalP1 = textoTotalP1;         
+    }
+    
+    public JLabel getTextoTotalP2(){
+        return  textoTotalP2;         
+    }
+    
+    public void setTextoTotalP2(JLabel textoTotalP2){
+        this.textoTotalP2 = textoTotalP2;         
+    }
+    
+    public JLabel getTextoTotalP3(){
+        return  textoTotalP3;         
+    }
+    
+    public void setTextoTotalP3(JLabel textoTotalP3){
+        this.textoTotalP3 = textoTotalP3;         
+    }
+    
+    
+    
+
 }
