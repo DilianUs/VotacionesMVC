@@ -22,8 +22,9 @@ public class Controlador implements  ActionListener{
     private VistaVotacion ventana;
     private String nombre;
     private LinkedList<Producto> productos;
+    private BitacoraProductos producto;
+    private String extension = ".txt";
     
-   
     public Controlador(VistaVotacion ventana, String nombre){
         this.productos = new LinkedList();
         this.ventana = ventana;
@@ -32,10 +33,11 @@ public class Controlador implements  ActionListener{
         this.ventana.getButton2().addActionListener(this);
         this.ventana.getButton3().addActionListener(this);
         this.ventana.setResizable(false); 
+        this.nombresBotones();
+        this.votosActuales(); 
     }
     
-    
-    private BitacoraProductos producto;
+   
     public void nombresBotones(){
         try {
             Bitacora.escribirBitacora(this.getClass(), new Object() {
@@ -49,7 +51,7 @@ public class Controlador implements  ActionListener{
         this.ventana.getButton3().setText(this.productos.get(2).getNombre());
     }
     
-    private String extension = ".txt";
+   
     public String votar(int i, Fecha fechaHora) {
         try {
             Bitacora.escribirBitacora(this.getClass(), new Object() {
@@ -87,7 +89,7 @@ public class Controlador implements  ActionListener{
             this.ventana.getTextoTotalP2().setText(votoRealizado);
         }
         
-         if(actionUser.getSource() == this.ventana.getButton2()){
+         if(actionUser.getSource() == this.ventana.getButton3()){
             String votoRealizado = votar(2, fecha);
             this.ventana.getTextoTotalP3().setText(votoRealizado);
         }
